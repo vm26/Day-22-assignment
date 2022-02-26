@@ -1,4 +1,4 @@
-import Card from "../Card/Card";
+
 const CartItem = ({ title, price,x,rating,deleteItem}) => {
  
   return (

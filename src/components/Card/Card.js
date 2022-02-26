@@ -18,7 +18,7 @@ function Card(props) {
             <div>
             </div>
             }       
-            <img src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt='image' className="h-1/2 w-72" />
+            <img src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt='resolution' className="h-1/2 w-72" />
             <div className="h-32 p-4 ">
                 <div className="font-bold text-lg">{props.title}</div>
                 <div>

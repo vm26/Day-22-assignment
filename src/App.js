@@ -20,7 +20,7 @@ function App() {
   
   const addToCart=(item)=>{
         let p=item.props;   
-    let name=Object.keys(p).filter(f=>p[f]==false);   
+    let name=Object.keys(p).filter(f=>p[f]===false);   
 setCartItems((oldvalue)=>{
   let updated=false;
   const newList=oldvalue.map((d)=> {      
@@ -93,18 +93,18 @@ const deleteCartItem = (item) => {
     onOtherClick={()=>setShowModal(false)}/>
     <Modal open={showModal} onClose={()=>{setShowModal(false)}}>  
     
-    <div className="mt-2 mb-2 hover:bg-neutral-300 ">
-            <a className='p-4  mr-8 ' href="#" onClick={()=>{setShowModal(false)}}>All Products</a>
+    <div className="mt-1 mb-1 hover:bg-neutral-300 ">
+            <button className='p-2  mr-2 ' onClick={()=>{setShowModal(false)}}>All Products</button>
             </div>
             <div>
                 <div className="border-b border-black"></div>
             </div>
            
-            <div className='mt-2 mb-2 hover:bg-neutral-300'>
-           <a  className='p-4  mr-8'href="#" onClick={()=>{setShowModal(false)}}>Popular Items</a>
+            <div className='mt-1 mb-1 hover:bg-neutral-300'>
+           <button  className='p-2  mr-2' onClick={()=>{setShowModal(false)}}>Popular Items</button>
            </div>
-           <div className='mt-2 mb-2 hover:bg-neutral-300'>
-           <a className='p-4  mr-8' href="#" onClick={()=>{setShowModal(false)}}>New Arrivals</a>
+           <div className='mt-1 mb-1 hover:bg-neutral-300'>
+           <button className='p-2  mr-2'  onClick={()=>{setShowModal(false)}}>New Arrivals</button>
            </div>
       </Modal>
     <CartModal showFooter open={showCartModal} onClose={()=>{setShowCartModal(false)} }> 
